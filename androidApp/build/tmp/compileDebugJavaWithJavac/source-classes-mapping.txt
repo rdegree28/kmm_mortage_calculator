@@ -1,0 +1,2 @@
+com/example/numberdivider/androidApp/BuildConfig.java
+ com.example.numberdivider.androidApp.BuildConfig

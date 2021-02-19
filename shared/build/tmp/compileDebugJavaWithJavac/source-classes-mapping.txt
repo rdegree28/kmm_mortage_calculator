@@ -1,0 +1,2 @@
+com/example/numberdivider/shared/BuildConfig.java
+ com.example.numberdivider.shared.BuildConfig

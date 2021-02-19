@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+  <TextView
+      android:id="@+id/principal_label_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:text="Principal"
+      app:layout_constraintBottom_toTopOf="@id/interest_label_text_view"
+      app:layout_constraintEnd_toEndOf="@+id/divider_guideline"
+      app:layout_constraintHorizontal_bias="0.274"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.349" />
+
+  <TextView
+      android:id="@+id/interest_label_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginTop="50dp"
+      android:text="Interest Rate"
+      app:layout_constraintEnd_toEndOf="@+id/divider_guideline"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/result_label_text_view"
+      app:layout_constraintTop_toBottomOf="@+id/principal_label_text_view" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/principal_text_input_layout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="@+id/principal_label_text_view"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/divider_guideline"
+      app:layout_constraintTop_toTopOf="@+id/principal_label_text_view">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/principal_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/interest_text_input_layout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="@+id/interest_label_text_view"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/divider_guideline"
+      app:layout_constraintTop_toTopOf="@+id/interest_label_text_view">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/interest_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/divider_guideline"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.35" />
+
+  <TextView
+      android:id="@+id/result_label_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:text="Result"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintBottom_toBottomOf="@id/calculate_button"
+      app:layout_constraintEnd_toStartOf="@+id/divider_guideline"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/interest_label_text_view" />
+
+  <TextView
+      android:id="@+id/result_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="@+id/result_label_text_view"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/divider_guideline"
+      app:layout_constraintTop_toTopOf="@+id/result_label_text_view"
+      android:textSize="24sp"
+      tools:text="100.00" />
+
+  <Button
+      android:id="@+id/calculate_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/result_text_view"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:text="Calculate"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
